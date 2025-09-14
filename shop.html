@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="index,follow" />
   <title>Shop – Prime Fitness Graz</title>
-  <meta name="description" content="Premium Fitnessstudio & Wellness in Graz. Prime Fitness Graz mit Pool, Sauna, 100+ Kursen/Woche, Premium-Geräten & Wellness. Mitgliedschaften mit 6/12 Monaten, Corporate & Senioren – Tageskarte & Monatskarte online." />
+  <meta name="description" content="Premium Fitnessstudio & Wellness in Graz. Prime Fitness Graz mit Pool, Sauna, 100+ Kurse/Woche, Premium-Geräten & Wellness. Mitgliedschaften 6/12 Monate, Studenten, Senioren, Corporate. Gutscheine online." />
   <link rel="icon" href="./assets/img/favicon.svg">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <script defer src="./assets/js/main.js"></script>
@@ -26,9 +26,11 @@
       <nav>
         <a href="./mitgliedschaften.html">Mitgliedschaften</a>
         <a href="./bereiche.html">Bereiche</a>
-        <a href="./services.html">Services</a>
         <a href="./wellness.html">Wellness</a>
-        <a href="./kursplan.html">Kursplan</a>
+        <a href="./services.html">Services</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./about.html">Über uns</a>
+        <a href="./gutscheine.html">Gutscheine</a>
         <a href="./shop.html" class="btn btn-secondary">Shop <span class="cart-badge"></span></a>
         <a href="./index.html#kontakt" class="btn btn-primary">Kontakt</a>
       </nav>
@@ -37,26 +39,11 @@
 
 <main class="container section">
   <h1>Shop</h1>
-  <p>Jetzt online kaufen – sichere Zahlung (Stripe/PayPal/Klarna-Integration möglich). Für Rückfragen: <a href="mailto:kevin.pirker10@gmail.com">kevin.pirker10@gmail.com</a>.</p>
+  <p>Jetzt online kaufen – sichere Zahlung (Stripe/PayPal/Klarna-Integration möglich).</p>
   <div class="grid-3">
-    <div class="card">
-      <h3>Tageskarte</h3>
-      <p>1 Tag Training + Kurse</p>
-      <p><strong>39 €</strong></p>
-      <button class="btn btn-primary" onclick="PFG_CART.addItem('DAYPASS','Tageskarte',39,1)">In den Warenkorb</button>
-    </div>
-    <div class="card">
-      <h3>Monatskarte</h3>
-      <p>1 Monat Training + Kurse</p>
-      <p><strong>189 €</strong></p>
-      <button class="btn btn-primary" onclick="PFG_CART.addItem('MONTHPASS','Monatskarte',189,1)">In den Warenkorb</button>
-    </div>
-    <div class="card">
-      <h3>Wertgutschein</h3>
-      <p>Betrag frei wählbar</p>
-      <label>Betrag (€): <input id="giftAmount" type="number" min="10" step="5" value="50" style="width:100px"></label>
-      <p><button class="btn btn-primary" onclick="(function(){var a=parseFloat(document.getElementById('giftAmount').value||'50'); if(a<10){alert('Mindestens 10 €');return;} PFG_CART.addItem('GIFT','Wertgutschein',a,1);})()">In den Warenkorb</button></p>
-    </div>
+    <div class="card"><h3>Tageskarte</h3><p>1 Tag Training + Kurse</p><p><strong>39 €</strong></p><button class="btn btn-primary" onclick="PFG_CART.addItem('DAYPASS','Tageskarte',39,1)">In den Warenkorb</button></div>
+    <div class="card"><h3>Monatskarte</h3><p>1 Monat Training + Kurse</p><p><strong>189 €</strong></p><button class="btn btn-primary" onclick="PFG_CART.addItem('MONTHPASS','Monatskarte',189,1)">In den Warenkorb</button></div>
+    <div class="card"><h3>Wertgutschein</h3><p>Betrag frei wählbar</p><label>Betrag (€): <input id="giftAmountShop" type="number" min="10" step="5" value="50" style="width:100px"></label><p><button class="btn btn-primary" onclick="(function(){var a=parseFloat(document.getElementById('giftAmountShop').value||'50'); if(a<10){alert('Mindestens 10 €');return;} PFG_CART.addItem('GIFT','Wertgutschein',a,1);})()">In den Warenkorb</button></p></div>
   </div>
   <hr>
   <h2>Warenkorb <span class="cart-badge"></span></h2>
@@ -64,9 +51,8 @@
     <thead><tr><th>Produkt</th><th>Menge</th><th>Preis</th><th>Summe</th><th>Aktion</th></tr></thead>
     <tbody></tbody>
   </table>
-  <p><strong>Gesamt: <span id="cart-total">0.00 €</span></strong></p>
-  <div class="cta">
-    <a class="btn btn-secondary" href="./mitgliedschaften.html">Weiter einkaufen</a>
+  <div class="cart-total">
+    <div>Gesamt: <strong><span id="cart-total">0.00 €</span></strong></div>
     <a class="btn btn-primary" href="./checkout.html">Zur Kasse</a>
   </div>
 </main>
@@ -92,9 +78,11 @@
           <li><a href="./index.html">Start</a></li>
           <li><a href="./mitgliedschaften.html">Mitgliedschaften</a></li>
           <li><a href="./bereiche.html">Bereiche</a></li>
-          <li><a href="./services.html">Services</a></li>
           <li><a href="./wellness.html">Wellness</a></li>
-          <li><a href="./kursplan.html">Kursplan</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog & Ratgeber</a></li>
+          <li><a href="./about.html">Über uns</a></li>
+          <li><a href="./gutscheine.html">Gutscheine</a></li>
           <li><a href="./shop.html">Shop</a></li>
           <li><a href="./index.html#kontakt">Kontakt</a></li>
         </ul>

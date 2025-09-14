@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="index,follow" />
   <title>Kasse – Prime Fitness Graz</title>
-  <meta name="description" content="Premium Fitnessstudio & Wellness in Graz. Prime Fitness Graz mit Pool, Sauna, 100+ Kursen/Woche, Premium-Geräten & Wellness. Mitgliedschaften mit 6/12 Monaten, Corporate & Senioren – Tageskarte & Monatskarte online." />
+  <meta name="description" content="Premium Fitnessstudio & Wellness in Graz. Prime Fitness Graz mit Pool, Sauna, 100+ Kurse/Woche, Premium-Geräten & Wellness. Mitgliedschaften 6/12 Monate, Studenten, Senioren, Corporate. Gutscheine online." />
   <link rel="icon" href="./assets/img/favicon.svg">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <script defer src="./assets/js/main.js"></script>
@@ -26,9 +26,11 @@
       <nav>
         <a href="./mitgliedschaften.html">Mitgliedschaften</a>
         <a href="./bereiche.html">Bereiche</a>
-        <a href="./services.html">Services</a>
         <a href="./wellness.html">Wellness</a>
-        <a href="./kursplan.html">Kursplan</a>
+        <a href="./services.html">Services</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./about.html">Über uns</a>
+        <a href="./gutscheine.html">Gutscheine</a>
         <a href="./shop.html" class="btn btn-secondary">Shop <span class="cart-badge"></span></a>
         <a href="./index.html#kontakt" class="btn btn-primary">Kontakt</a>
       </nav>
@@ -37,22 +39,27 @@
 
 <main class="container section">
   <h1>Kasse</h1>
-  <p>Bezahlen Sie sicher mit Visa, Mastercard, Maestro, Klarna, Apple Pay, Google Pay oder PayPal (nach Integration des Zahlungsanbieters).</p>
-  <h2>Bestellung</h2>
-  <table class="table" id="cart-table">
-    <thead><tr><th>Produkt</th><th>Menge</th><th>Preis</th><th>Summe</th><th>Aktion</th></tr></thead>
-    <tbody></tbody>
-  </table>
-  <p><strong>Gesamt: <span id="cart-total">0.00 €</span></strong></p>
-  <h2>Ihre Daten</h2>
-  <form class="card" method="POST" action="mailto:kevin.pirker10@gmail.com" enctype="text/plain" onsubmit="alert('Dies ist ein statischer Demo-Checkout. Zahlungsanbieter bitte integrieren.');">
-    <label>Vor- und Nachname*<br><input name='name' required></label><br>
-    <label>E-Mail*<br><input name='email' type="email" required></label><br>
-    <label>Adresse<br><input name='address'></label><br>
-    <label>Nachricht (optional)<br><textarea name='message' rows="5"></textarea></label><br>
-    <label><input type="checkbox" required> Ich akzeptiere die <a href="./agb.html" target="_blank">AGB</a> und die <a href="./datenschutz.html" target="_blank">Datenschutzbestimmungen</a>.</label><br><br>
-    <button class="btn btn-primary" type="submit">Zahlung starten</button>
-  </form>
+  <div class="card">
+    <h2>Bestellung</h2>
+    <table class="table" id="cart-table">
+      <thead><tr><th>Produkt</th><th>Menge</th><th>Preis</th><th>Summe</th><th>Aktion</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="cart-total">
+      <div>Gesamt: <strong><span id="cart-total">0.00 €</span></strong></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:1rem">
+    <h2>Ihre Daten</h2>
+    <form method="POST" action="mailto:kevin.pirker10@gmail.com" enctype="text/plain" onsubmit="alert('Statischer Demo-Checkout – Zahlungsanbieter bitte integrieren.');">
+      <label>Vor- und Nachname*<br><input name='name' required></label><br>
+      <label>E-Mail*<br><input name='email' type="email" required></label><br>
+      <label>Adresse<br><input name='address'></label><br>
+      <label>Nachricht (optional)<br><textarea name='message' rows="5"></textarea></label><br>
+      <label><input type="checkbox" required> Ich akzeptiere die <a href="./agb.html" target="_blank">AGB</a> und die <a href="./datenschutz.html" target="_blank">Datenschutzbestimmungen</a>.</label><br><br>
+      <button class="btn btn-primary" type="submit">Zahlung starten</button>
+    </form>
+  </div>
 </main>
 
   <footer class="footer">
@@ -76,9 +83,11 @@
           <li><a href="./index.html">Start</a></li>
           <li><a href="./mitgliedschaften.html">Mitgliedschaften</a></li>
           <li><a href="./bereiche.html">Bereiche</a></li>
-          <li><a href="./services.html">Services</a></li>
           <li><a href="./wellness.html">Wellness</a></li>
-          <li><a href="./kursplan.html">Kursplan</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog & Ratgeber</a></li>
+          <li><a href="./about.html">Über uns</a></li>
+          <li><a href="./gutscheine.html">Gutscheine</a></li>
           <li><a href="./shop.html">Shop</a></li>
           <li><a href="./index.html#kontakt">Kontakt</a></li>
         </ul>
