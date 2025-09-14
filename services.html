@@ -8,14 +8,14 @@
   <meta name="theme-color" content="#0ea5e9">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="index,follow" />
-  <title>Kasse – Prime Fitness Graz</title>
+  <title>Services – Prime Fitness Graz</title>
   <meta name="description" content="Premium Fitnessstudio & Wellness in Graz. Prime Fitness Graz mit Pool, Sauna, 100+ Kursen/Woche, Premium-Geräten & Wellness. Mitgliedschaften mit 6/12 Monaten, Corporate & Senioren – Tageskarte & Monatskarte online." />
   <link rel="icon" href="./assets/img/favicon.svg">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <script defer src="./assets/js/main.js"></script>
 
 </head>
-<body onload="renderCart()">
+<body>
 
   <header class="header">
     <div class="container nav" aria-label="Hauptnavigation">
@@ -36,23 +36,14 @@
   </header>
 
 <main class="container section">
-  <h1>Kasse</h1>
-  <p>Bezahlen Sie sicher mit Visa, Mastercard, Maestro, Klarna, Apple Pay, Google Pay oder PayPal (nach Integration des Zahlungsanbieters).</p>
-  <h2>Bestellung</h2>
-  <table class="table" id="cart-table">
-    <thead><tr><th>Produkt</th><th>Menge</th><th>Preis</th><th>Summe</th><th>Aktion</th></tr></thead>
-    <tbody></tbody>
-  </table>
-  <p><strong>Gesamt: <span id="cart-total">0.00 €</span></strong></p>
-  <h2>Ihre Daten</h2>
-  <form class="card" method="POST" action="mailto:kevin.pirker10@gmail.com" enctype="text/plain" onsubmit="alert('Dies ist ein statischer Demo-Checkout. Zahlungsanbieter bitte integrieren.');">
-    <label>Vor- und Nachname*<br><input name='name' required></label><br>
-    <label>E-Mail*<br><input name='email' type="email" required></label><br>
-    <label>Adresse<br><input name='address'></label><br>
-    <label>Nachricht (optional)<br><textarea name='message' rows="5"></textarea></label><br>
-    <label><input type="checkbox" required> Ich akzeptiere die <a href="./agb.html" target="_blank">AGB</a> und die <a href="./datenschutz.html" target="_blank">Datenschutzbestimmungen</a>.</label><br><br>
-    <button class="btn btn-primary" type="submit">Zahlung starten</button>
-  </form>
+  <h1>Services</h1>
+  <div class="grid-3">
+    <div class="card"><h3>Personal Training</h3><p>Individuelle Einheiten – Fokus auf Technik & Zielerreichung. <strong>69 € / Stunde</strong>.</p></div>
+    <div class="card"><h3>Ernährungsberatung</h3><p>Ganzheitliche Strategien für Performance & Gesundheit.</p></div>
+    <div class="card"><h3>Massagen</h3><p>Sport- & Regenerationsmassagen – Erholung auf Premiumniveau.</p></div>
+    <div class="card"><h3>Physiotherapie</h3><p>Prävention & Rehabilitation – auf Wunsch als Programm.</p></div>
+    <div class="card"><h3>Körperanalyse</h3><p>Einmalig <strong>29 €</strong> – datenbasiert trainieren.</p></div>
+  </div>
 </main>
 
   <footer class="footer">

@@ -1,9 +1,12 @@
 
+// Smooth scroll for same-page anchors
 document.addEventListener('DOMContentLoaded', ()=>{
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click', (e)=>{ const id=a.getAttribute('href'); if(id.startsWith('#')){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth'}); } });
   });
 });
+
+// Consent manager + GA4 lazy injection
 (function(){ 
   var CONSENT_KEY='pfg_consent_v1';
   var GA_ID='G-EDT465YDT4';
@@ -27,7 +30,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
   if (hasConsent()){ injectGA(); } else if(localStorage.getItem(CONSENT_KEY)==='declined'){ } else { showBanner(); }
 })();
-// Cart
+
+// Simple cart using localStorage
 (function(){
   const CART_KEY='pfg_cart_v1';
   function getCart(){ try{ return JSON.parse(localStorage.getItem(CART_KEY)||'[]'); }catch(e){ return []; } }
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   window.PFG_CART = { addItem, removeItem, setQty, getCart, sum, updateCartBadge, saveCart };
   document.addEventListener('DOMContentLoaded', updateCartBadge);
 })();
+
 function renderCart(){
   const table=document.getElementById('cart-table'); if(!table) return;
   const tbody=table.querySelector('tbody'); tbody.innerHTML='';

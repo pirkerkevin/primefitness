@@ -8,14 +8,14 @@
   <meta name="theme-color" content="#0ea5e9">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="index,follow" />
-  <title>Kasse – Prime Fitness Graz</title>
+  <title>Kursplan – Prime Fitness Graz</title>
   <meta name="description" content="Premium Fitnessstudio & Wellness in Graz. Prime Fitness Graz mit Pool, Sauna, 100+ Kursen/Woche, Premium-Geräten & Wellness. Mitgliedschaften mit 6/12 Monaten, Corporate & Senioren – Tageskarte & Monatskarte online." />
   <link rel="icon" href="./assets/img/favicon.svg">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <script defer src="./assets/js/main.js"></script>
 
 </head>
-<body onload="renderCart()">
+<body>
 
   <header class="header">
     <div class="container nav" aria-label="Hauptnavigation">
@@ -36,23 +36,20 @@
   </header>
 
 <main class="container section">
-  <h1>Kasse</h1>
-  <p>Bezahlen Sie sicher mit Visa, Mastercard, Maestro, Klarna, Apple Pay, Google Pay oder PayPal (nach Integration des Zahlungsanbieters).</p>
-  <h2>Bestellung</h2>
-  <table class="table" id="cart-table">
-    <thead><tr><th>Produkt</th><th>Menge</th><th>Preis</th><th>Summe</th><th>Aktion</th></tr></thead>
-    <tbody></tbody>
+  <h1>Kursplan</h1>
+  <p class="small">Beispielwoche – Änderungen vorbehalten. Aktuelle Pläne vor Ort.</p>
+  <table class="table">
+    <thead><tr><th>Tag</th><th>Zeit</th><th>Kurs</th><th>Level</th><th>Trainer:in</th></tr></thead>
+    <tbody>
+      <tr><td>Montag</td><td>07:00</td><td>HIIT</td><td>Alle</td><td>Lisa</td></tr>
+      <tr><td>Dienstag</td><td>18:00</td><td>Cycling</td><td>Mittel</td><td>Mark</td></tr>
+      <tr><td>Mittwoch</td><td>19:00</td><td>Yoga Flow</td><td>Alle</td><td>Eva</td></tr>
+      <tr><td>Donnerstag</td><td>17:30</td><td>Mobility</td><td>Alle</td><td>Tom</td></tr>
+      <tr><td>Freitag</td><td>18:30</td><td>Bodypump</td><td>Fortgeschritten</td><td>Nina</td></tr>
+      <tr><td>Samstag</td><td>10:00</td><td>Pilates</td><td>Alle</td><td>Clara</td></tr>
+      <tr><td>Sonntag</td><td>11:00</td><td>Stretch & Relax</td><td>Alle</td><td>Anna</td></tr>
+    </tbody>
   </table>
-  <p><strong>Gesamt: <span id="cart-total">0.00 €</span></strong></p>
-  <h2>Ihre Daten</h2>
-  <form class="card" method="POST" action="mailto:kevin.pirker10@gmail.com" enctype="text/plain" onsubmit="alert('Dies ist ein statischer Demo-Checkout. Zahlungsanbieter bitte integrieren.');">
-    <label>Vor- und Nachname*<br><input name='name' required></label><br>
-    <label>E-Mail*<br><input name='email' type="email" required></label><br>
-    <label>Adresse<br><input name='address'></label><br>
-    <label>Nachricht (optional)<br><textarea name='message' rows="5"></textarea></label><br>
-    <label><input type="checkbox" required> Ich akzeptiere die <a href="./agb.html" target="_blank">AGB</a> und die <a href="./datenschutz.html" target="_blank">Datenschutzbestimmungen</a>.</label><br><br>
-    <button class="btn btn-primary" type="submit">Zahlung starten</button>
-  </form>
 </main>
 
   <footer class="footer">
